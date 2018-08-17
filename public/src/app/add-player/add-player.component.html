@@ -1,0 +1,23 @@
+<div class="mt-4 p-4" id="add_player_wrapper">
+  <h2 class="text-light font-weight-light">Add Player</h2>
+  <form class="mt-4" (submit)="addPlayerFromService()">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label text-light">Player Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" [(ngModel)]="new_player.name" name="name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="position" class="col-sm-2 col-form-label text-light">Preferred Position: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="position" [(ngModel)]="new_player.position" name="position">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-success w-25 float-right">ADD</button>
+      </div>
+    </div>
+  </form>
+  <p class="text-danger float-right" *ngIf="error">{{ error }}</p>
+</div>

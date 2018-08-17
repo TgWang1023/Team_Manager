@@ -1,0 +1,56 @@
+<div id="table_wrap">
+  <table class="table table-striped table-dark mt-4" *ngIf="selected_1">
+    <thead>
+      <tr>
+        <th scope="col">Team Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let player of all_players">
+      <tr>
+        <th scope="row">{{ player.name }}</th>
+        <td>
+          <button class="btn w-25" (click)="updatePlayerFromService_1(player._id, 'playing')" [ngClass]="{ 'btn-success': player.status_1 === 'playing', 'btn-outline-success': player.status_1 !== 'playing' }">Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_1(player._id, 'not_playing')" [ngClass]="{ 'btn-danger': player.status_1 === 'not_playing', 'btn-outline-danger': player.status_1 !== 'not_playing' }">Not Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_1(player._id, 'undecided')" [ngClass]="{ 'btn-warning': player.status_1 === 'undecided', 'btn-outline-warning': player.status_1 !== 'undecided' }">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-dark mt-4" *ngIf="selected_2">
+    <thead>
+      <tr>
+        <th scope="col">Team Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let player of all_players">
+      <tr>
+        <th scope="row">{{ player.name }}</th>
+        <td>
+          <button class="btn w-25" (click)="updatePlayerFromService_2(player._id, 'playing')" [ngClass]="{ 'btn-success': player.status_2 === 'playing', 'btn-outline-success': player.status_2 !== 'playing' }">Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_2(player._id, 'not_playing')" [ngClass]="{ 'btn-danger': player.status_2 === 'not_playing', 'btn-outline-danger': player.status_2 !== 'not_playing' }">Not Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_2(player._id, 'undecided')" [ngClass]="{ 'btn-warning': player.status_2 === 'undecided', 'btn-outline-warning': player.status_2 !== 'undecided' }">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-dark mt-4" *ngIf="selected_3">
+    <thead>
+      <tr>
+        <th scope="col">Team Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let player of all_players">
+      <tr>
+        <th scope="row">{{ player.name }}</th>
+        <td>
+          <button class="btn w-25" (click)="updatePlayerFromService_3(player._id, 'playing')" [ngClass]="{ 'btn-success': player.status_3 === 'playing', 'btn-outline-success': player.status_3 !== 'playing' }">Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_3(player._id, 'not_playing')" [ngClass]="{ 'btn-danger': player.status_3 === 'not_playing', 'btn-outline-danger': player.status_3 !== 'not_playing' }">Not Playing</button>
+          <button class="btn w-25 ml-4" (click)="updatePlayerFromService_3(player._id, 'undecided')" [ngClass]="{ 'btn-warning': player.status_3 === 'undecided', 'btn-outline-warning': player.status_3 !== 'undecided' }">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

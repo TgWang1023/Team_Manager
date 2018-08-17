@@ -1,0 +1,9 @@
+<div class="mt-4 p-4" id="status_wrapper">
+  <h1 class="text-light font-weight-light">Player Status - Game {{ selected_game }}</h1>
+  <div class="text-center">
+      <button type="button" class="btn btn-info w-25 mt-4" [routerLink]="['game', '1']" (click)="change_selected_game(1)">Game 1</button>
+      <button type="button" class="btn btn-info ml-4 w-25 mt-4" [routerLink]="['game', '2']" (click)="change_selected_game(2)">Game 2</button>
+      <button type="button" class="btn btn-info ml-4 w-25 mt-4" [routerLink]="['game', '3']" (click)="change_selected_game(3)">Game 3</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
